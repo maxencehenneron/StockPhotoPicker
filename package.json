@@ -1,0 +1,48 @@
+{
+  "name": "stockphotopicker",
+  "version": "0.0.1",
+  "description": "A plain javascript widget that lets you pick photos from different stock sources",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxencehenneron/StockPhotoPicker.git"
+  },
+  "keywords": [
+    "stock",
+    "photo",
+    "picker",
+    "widget"
+  ],
+  "author": "Maxence Henneron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxencehenneron/StockPhotoPicker/issues"
+  },
+  "homepage": "https://github.com/maxencehenneron/StockPhotoPicker#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "autoprefixer": "^9.4.4",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "cssnano": "^4.1.8",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
