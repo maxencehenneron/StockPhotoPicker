@@ -1,3 +1,117 @@
-.hello-world {
-    background-color: red;
+.photo-picker-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  background: rgba(0, 0, 0, .8);
+  cursor: pointer;
 }
+.photo-picker-modal-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+  background: #fff;
+  cursor: auto;
+}
+
+.photo-picker-grid {
+  height: 100%;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  align-content: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+.photo-picker-column {
+  align-content: stretch;
+  display: flex;
+  flex-basis: 0;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  margin-right: 24px;
+}
+
+.photo-picker-column:last-of-type {
+  margin-right: 0;
+}
+
+.photo-picker-photo {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  margin: 0 0 24px;
+  position: relative;
+  width: 100%;
+}
+
+.photo-picker-photo>img {
+  height: auto;
+  width: 100%;
+}
+
+.photo-picker-content {
+  flex: 1;
+}
+.photo-picker-search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+}
+
+.photo-picker-provider-icon {
+  width: 92;
+  height: 30px;
+  object-fit: contain;
+}
+
+input.search-bar {
+  margin: 0 auto;
+  width: 90%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  margin: 20px 30px 20px 0px;
+  border: 1px solid #d0cfce;
+  border-radius: 6px;
+  outline: none;
+  &:focus {
+    border: 1px solid #008abf;
+    transition: 0.35s ease;
+    color: #008abf;
+    &::-webkit-input-placeholder {
+      transition: opacity 0.45s ease;
+      opacity: 0;
+    }
+    &::-moz-placeholder {
+      transition: opacity 0.45s ease;
+      opacity: 0;
+    }
+    &:-ms-placeholder {
+      transition: opacity 0.45s ease;
+      opacity: 0;
+    }
+  }
+}
+
