@@ -1,9 +1,37 @@
 <!doctype html>
 <html>
   <head>
-    <title>My awesome plugin!</title>
+    <title>Stock photo picker</title>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) { 
+        var handler = new StockPhotoPicker({
+          unsplash: {
+            token: ''
+          },
+          giphy: {
+            token: ''
+          }
+        }); 
+
+        document.getElementById('unsplashButton').addEventListener('click', function(e) {
+          handler.open({
+            provider: 'unsplash'
+          });
+          e.preventDefault();
+        });
+
+        document.getElementById('giphyButton').addEventListener('click', function(e) {
+          handler.open({
+            provider: 'giphy'
+          });
+          e.preventDefault();
+        });
+      });
+    </script>
   </head>
   <body>
-    <p onclick="StockPhotoPicker.helloWorld(this)">Hello, World</p>
+    <button id="unsplashButton">Open Unsplash</button>
+    <button id="giphyButton">Open Giphy</button>
   </body>
 </html>
