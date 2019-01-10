@@ -11,7 +11,7 @@ export default class Modal {
    * Creates the base modal
    */
   renderModal() {
-    const { onBackgroundTap } = this.options;
+    const { onClose } = this.options;
 
     this.rootElem = document.createElement('div');
     this.rootElem.classList.add('photo-picker-modal');
@@ -19,7 +19,7 @@ export default class Modal {
       if (elem.target !== this.rootElem) {
         return;
       }
-      onBackgroundTap();
+      onClose();
     };
 
     this.contentElem = document.createElement('div');
@@ -91,12 +91,17 @@ export default class Modal {
    * @param {photos} An object that contains all the photos to add in the grid
    */
   addPhotos(photos) {
+    const { onImageSelected, onClose } = this.options;
     photos.forEach((value) => {
       const photoContainer = document.createElement('div');
       photoContainer.classList.add('photo-picker-photo');
 
       const photo = document.createElement('img');
       photo.src = value.small;
+      photo.onclick = (element) => {
+        onImageSelected(element.target.src);
+        onClose();
+      };
       photoContainer.appendChild(photo);
 
       photo.onload = () => {

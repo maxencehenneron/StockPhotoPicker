@@ -21,6 +21,8 @@ export default class StockPhotoPicker {
   }
 
   open(options) {
+    const { onImageSelected } = this.config;
+
     this.provider = options.provider;
 
     if (this.opened) {
@@ -36,8 +38,11 @@ export default class StockPhotoPicker {
         this.currentPage += 1;
         this.searchText(this.currentSearchText);
       },
-      onBackgroundTap: () => {
+      onClose: () => {
         this.close();
+      },
+      onImageSelected: (url) => {
+        onImageSelected(url);
       },
       image: providers[this.provider].image,
     });

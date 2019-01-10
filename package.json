@@ -1,6 +1,6 @@
 {
   "name": "stockphotopicker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A plain javascript widget that lets you pick photos from different stock sources",
   "main": "index.js",
   "scripts": {
